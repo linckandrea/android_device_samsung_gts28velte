@@ -26,6 +26,10 @@
 #
 #
 
+on init
+    # default is root radio 0440
+    chmod 0644 /proc/cmdline
+
 # QMUX must be in multiple groups to support external process connections
 service vendor.qmuxd /vendor/bin/qmuxd
     class main
